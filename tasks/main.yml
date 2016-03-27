@@ -1,2 +1,2 @@
 ---
-# tasks file for blog-ghost
+- lineinfile: dest={{ nginx_ghost_conf }} state=present regexp='server_name .*' line='server_name {{ hostname }};'
