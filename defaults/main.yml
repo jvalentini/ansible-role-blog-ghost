@@ -1,2 +1,2 @@
 ---
-# defaults file for blog-ghost
+nginx_ghost_conf: /etc/nginx/sites-available/ghost
