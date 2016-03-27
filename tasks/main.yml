@@ -1,2 +1,4 @@
 ---
 - lineinfile: dest={{ nginx_ghost_conf }} state=present regexp='server_name .*' line='server_name {{ hostname }};'
+
+- lineinfile: dest={{ ghost_conf }} state=present regexp='http://my-ghost-blog.com' line={{ url_line }}
