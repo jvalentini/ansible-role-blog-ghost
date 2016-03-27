@@ -6,4 +6,4 @@ ghost_conf: /var/www/ghost/config.js
 url: http://{{ hostname }}
 
 # Fully quoted because of the ': ' on the line.
-url_line: "        url: '{{ url }}'"
+url_line: "        url: '{{ url }}',"
