@@ -13,7 +13,22 @@ Requirements
 Role Variables
 --------------
 
-`hostname: blog.example.com`
+Required:
+
+```
+hostname: blog.example.com
+mail_user: postmaster@blog.example.com
+mail_pass: 4j6f0f65893054e2ada96a5babj23l1234
+```
+
+Defaults:
+
+```
+nginx_ghost_conf: /etc/nginx/sites-available/ghost
+ghost_conf: /var/www/ghost/config.js
+url: http://{{ hostname }}
+mail_service: Mailgun
+```
 
 Dependencies
 ------------
