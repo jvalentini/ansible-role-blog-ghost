@@ -7,3 +7,16 @@ url: http://{{ hostname }}
 
 # Fully quoted because of the ': ' on the line.
 url_line: "        url: '{{ url }}',"
+
+mail_regexp: "mail: {},"
+mail_service: Mailgun
+mail: "        mail: {
+            transport: 'SMTP',
+            options: {
+                service: '{{ mail_service }}',
+                auth: {
+                    user: '{{ mail_user }}',
+                    pass: '{{ mail_pass }}'
+                }
+            }
+        },"

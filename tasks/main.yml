@@ -6,3 +6,7 @@
 - name: updating ghost url
   lineinfile: dest={{ ghost_conf }} state=present regexp='http://my-ghost-blog.com' line={{ url_line }}
   notify: restart ghost
+
+- name: updating ghost mail
+  lineinfile: dest={{ ghost_conf }} state=present regexp={{ mail_regexp }} line={{ mail }}
+  notify: restart ghost
