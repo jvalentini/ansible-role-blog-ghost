@@ -1,2 +1,8 @@
 ---
-# tasks file for blog-ghost
+- name: updating nginx server_name
+  lineinfile: dest={{ nginx_ghost_conf }} state=present regexp='server_name .*' line='server_name {{ hostname }};'
+  notify: restart nginx
+
+- name: updating ghost url
+  lineinfile: dest={{ ghost_conf }} state=present regexp='http://my-ghost-blog.com' line={{ url_line }}
+  notify: restart ghost

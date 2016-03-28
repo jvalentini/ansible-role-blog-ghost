@@ -1,2 +1,6 @@
 ---
-# handlers file for blog-ghost
+- name: restart nginx
+  service: name=nginx state=restarted
+
+- name: restart ghost
+  service: name=ghost state=restarted
