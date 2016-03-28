@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jvalentini/ansible-role-blog-ghost.svg?branch=master)](https://travis-ci.org/jvalentini/ansible-role-blog-ghost)
+
 Blog-Ghost
 =========
 
